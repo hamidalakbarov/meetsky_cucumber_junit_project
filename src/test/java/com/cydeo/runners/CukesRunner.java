@@ -16,8 +16,11 @@ import org.junit.runner.RunWith;
         dryRun=false,
         // tags to execute only scenarios with given tag
         tags="",
-        // plugin to get a report
-        plugin = "html:target/cucumber-report.html"
+        // plugin to get a reports and create a rerun.txt file
+        plugin = {"html:target/cucumber-report.html",
+                    "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                        "rerun:target/rerun.txt"},
+        publish = true
 )
 
 public class CukesRunner {
