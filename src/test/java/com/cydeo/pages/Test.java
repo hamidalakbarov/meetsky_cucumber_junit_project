@@ -5,6 +5,4 @@ public class Test {
     // changes
 
     // test
-
-    // hello
 }
