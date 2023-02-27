@@ -18,7 +18,8 @@ import org.junit.runner.RunWith;
         tags="@login",
         // plugin to get a reports and create a rerun.txt file
         plugin = {"html:target/cucumber-report.html",
-                        "rerun:target/rerun.txt"},
+                        "rerun:target/rerun.txt",
+                        "me.jvt.cucumber.report.PrettyReports:target/cucumber"},
         publish = true
 )
 
