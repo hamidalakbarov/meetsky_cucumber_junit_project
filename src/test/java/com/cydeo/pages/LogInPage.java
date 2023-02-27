@@ -23,4 +23,8 @@ public class LogInPage extends BasePage{
         logInPage.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         logInPage.logInButton.click();
     }
+
+    @FindBy(xpath = "//p[contains(@class,'warning')]")
+    public WebElement credentialsWarningMsg;
+
 }
