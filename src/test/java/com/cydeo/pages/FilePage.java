@@ -13,11 +13,14 @@ public class FilePage extends BasePage {
     @FindBy(xpath = "//div[contains(@class,'fileActionsMenu')]//a")
     public List<WebElement> threeDotsOptions;
 
-    @FindBy(xpath = "//label[@data-action='upload']")
+    @FindBy(css = "input#file_upload_start")
     public WebElement uploadFileButton;
 
     @FindBy(xpath = "//span[.='New']/preceding-sibling::span")
     public WebElement plusButton;
+
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
+    public WebElement firstRow;
 
 
 }

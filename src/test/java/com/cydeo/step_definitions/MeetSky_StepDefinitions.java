@@ -17,6 +17,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 
@@ -186,10 +187,12 @@ public class MeetSky_StepDefinitions {
 
     @When("user clicks Upload file")
     public void user_clicks_upload_file() {
+        filePage.uploadFileButton.sendKeys("/Users/hamidalakbarov/Desktop/file to upload by me5");
     }
 
     @Then("user should see file name on the screen")
     public void user_should_see_file_name_on_the_screen() {
+        Assert.assertEquals("file to upload by me5",filePage.firstRow.getText());
     }
 
 

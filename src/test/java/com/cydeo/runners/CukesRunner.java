@@ -6,20 +6,21 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions (
+@CucumberOptions(
 
         // providing path for feature file
-        features="src/test/resources/features",
+        features = "src/test/resources/features",
         // providing step definitions as a glue
-        glue="com/cydeo/step_definitions",
+        glue = "com/cydeo/step_definitions",
         // dryRun for getting just running feature file to get code snippets
-        dryRun=false,
+        dryRun = false,
         // tags to execute only scenarios with given tag
-        tags="@login",
+        tags = "@login",
         // plugin to get a reports and create a rerun.txt file
         plugin = {"html:target/cucumber-report.html",
-                        "rerun:target/rerun.txt",
-                        "me.jvt.cucumber.report.PrettyReports:target/cucumber"},
+                "rerun:target/rerun.txt",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "json:target/cucumber.json"},
         publish = true
 )
 
