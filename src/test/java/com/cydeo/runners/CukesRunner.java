@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         // dryRun for getting just running feature file to get code snippets
         dryRun = false,
         // tags to execute only scenarios with given tag
-        tags = "@login",
+        tags = "@wip",
         // plugin to get a reports and create a rerun.txt file
         plugin = {"html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
