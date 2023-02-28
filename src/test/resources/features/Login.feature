@@ -7,7 +7,7 @@ Feature: Login Functionality
     Given user is on login page
 
   #AC1
-
+  @login
   Scenario: Users should be able to log in with valid credentials should land on the "Dashboard" page after successful login.
     When user enters valid username
     And user enters valid password
